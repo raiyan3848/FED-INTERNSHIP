@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Product</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url(img/games.jpg);
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+.addproduct-button {
+  background-color: #ff0004;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.addproduct-button:hover {
+  background-color: #9c0525;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: none;
+  box-shadow: none;
+}
+
+h1, label {
+  color: red;
+}
+
+h1{
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Add New Product</h1>
+  <div class="container">
+  <form id="addProductForm" action="process_product.php" method="post" style="width: 600px;">
+    <label for="productName">Product Name:</label><br>
+    <input type="text" id="productName" name="productName" required><br>
+
+    <label for="productDescription">Product Description:</label><br>
+    <textarea id="productDescription" name="productDescription" rows="4" required></textarea><br>
+
+    <label for="productImage">Image URL:</label><br>
+    <input type="url" id="productImage" name="productImage" placeholder="Enter image URL" required><br>
+
+    <label for="productPrice">Price:</label><br>
+    <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required><br>
+
+    <button type="submit" class="addproduct-button">Add Product</button>
+  </form>
+  </div>
+
+</body>
+</html>

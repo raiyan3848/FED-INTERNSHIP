@@ -1,0 +1,77 @@
+/* Responsive Media Query */
+@media (min-width: 1200px){
+	.menu ul {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 1200px){
+	body {
+		background-image: url(img/GodBGMob.png);
+	}
+	
+	.menu ul li {
+		margin-left: 7px;
+		text-align: left;
+		padding-left: 60px;
+	}
+
+	li .MobNavBtns {
+		padding: 0 15px;
+	}
+
+	.MobNavBtns button {
+		display: block;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.NavBtns {
+		display: none;
+	}
+
+	.checkbtn{
+		display: block;
+	}
+
+	.center .title {
+		font-size: 38px;
+	}
+
+	.center {
+		width: 100%;
+	}
+
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 0;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav ul li{
+		display: block;
+		margin: 20px 0;
+	}
+	
+	nav ul li a{
+		font-size: 20px;
+	}
+	
+	a:hover,a.active{
+		background: none;
+		color: #e6e600;
+	}
+	
+	#check:checked ~ ul{
+		left: -50px;
+	}
+}
+/* Responsive Media Query End */
